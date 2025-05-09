@@ -16,7 +16,7 @@ limitations under the License.
 
 package pricing
 
-// generated at 2025-03-24T13:14:03Z for us-east-1
+// generated at 2025-04-28T13:22:39Z for us-east-1
 
 import ec2types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 
@@ -252,6 +252,10 @@ var InitialOnDemandPricesUSGov = map[string]map[ec2types.InstanceType]float64{
 		"c7g.12xlarge": 2.080800, "c7g.16xlarge": 2.774400, "c7g.2xlarge": 0.346800, "c7g.4xlarge": 0.693600,
 		"c7g.8xlarge": 1.387200, "c7g.large": 0.086700, "c7g.medium": 0.043400, "c7g.metal": 2.774400,
 		"c7g.xlarge": 0.173400,
+		// c7gd family
+		"c7gd.12xlarge": 2.630900, "c7gd.16xlarge": 3.507800, "c7gd.2xlarge": 0.438500, "c7gd.4xlarge": 0.877000,
+		"c7gd.8xlarge": 1.753900, "c7gd.large": 0.109600, "c7gd.medium": 0.054800, "c7gd.metal": 3.507800,
+		"c7gd.xlarge": 0.219200,
 		// c7i-flex family
 		"c7i-flex.12xlarge": 2.442000, "c7i-flex.16xlarge": 3.256000, "c7i-flex.2xlarge": 0.407000,
 		"c7i-flex.4xlarge": 0.814000, "c7i-flex.8xlarge": 1.628000, "c7i-flex.large": 0.101750,
@@ -433,9 +437,9 @@ var InitialOnDemandPricesUSGov = map[string]map[ec2types.InstanceType]float64{
 		"r6in.32xlarge": 13.403520, "r6in.4xlarge": 1.675440, "r6in.8xlarge": 3.350880, "r6in.large": 0.209430,
 		"r6in.metal": 13.403520, "r6in.xlarge": 0.418860,
 		// r7g family
-		"r7g.12xlarge": 30.806400, "r7g.16xlarge": 41.075200, "r7g.2xlarge": 5.134400, "r7g.4xlarge": 10.268800,
-		"r7g.8xlarge": 20.537600, "r7g.large": 1.283600, "r7g.medium": 0.641800, "r7g.metal": 41.075200,
-		"r7g.xlarge": 2.567200,
+		"r7g.12xlarge": 3.080600, "r7g.16xlarge": 4.107500, "r7g.2xlarge": 0.513400, "r7g.4xlarge": 1.026900,
+		"r7g.8xlarge": 2.053800, "r7g.large": 0.128400, "r7g.medium": 0.064200, "r7g.metal": 4.107500,
+		"r7g.xlarge": 0.256700,
 		// r7gd family
 		"r7gd.12xlarge": 3.925000, "r7gd.16xlarge": 5.233300, "r7gd.2xlarge": 0.654200, "r7gd.4xlarge": 1.308300,
 		"r7gd.8xlarge": 2.616600, "r7gd.large": 0.163500, "r7gd.medium": 0.081800, "r7gd.metal": 5.233300,
@@ -444,6 +448,10 @@ var InitialOnDemandPricesUSGov = map[string]map[ec2types.InstanceType]float64{
 		"r7i.12xlarge": 3.805200, "r7i.16xlarge": 5.073600, "r7i.24xlarge": 7.610400, "r7i.2xlarge": 0.634200,
 		"r7i.48xlarge": 15.220800, "r7i.4xlarge": 1.268400, "r7i.8xlarge": 2.536800, "r7i.large": 0.158550,
 		"r7i.metal-24xl": 8.371440, "r7i.metal-48xl": 15.220800, "r7i.xlarge": 0.317100,
+		// r8g family
+		"r8g.12xlarge": 3.388440, "r8g.16xlarge": 4.517920, "r8g.24xlarge": 6.776880, "r8g.2xlarge": 0.564740,
+		"r8g.48xlarge": 13.553760, "r8g.4xlarge": 1.129480, "r8g.8xlarge": 2.258960, "r8g.large": 0.141190,
+		"r8g.medium": 0.070590, "r8g.metal-24xl": 7.454570, "r8g.metal-48xl": 13.553760, "r8g.xlarge": 0.282370,
 		// t1 family
 		"t1.micro": 0.024000,
 		// t2 family
