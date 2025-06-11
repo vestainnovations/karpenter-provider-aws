@@ -1,4 +1,4 @@
-module github.com/vesta/karpenter-provider-aws/test/hack/resource
+module github.com/vestainnovations/karpenter-provider-aws/test/hack/resource
 
 go 1.23.0
 

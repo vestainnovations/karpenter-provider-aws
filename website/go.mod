@@ -1,4 +1,4 @@
-module github.com/vesta/karpenter-provider-aws/website
+module github.com/vestainnovations/karpenter-provider-aws/website
 
 go 1.22
 

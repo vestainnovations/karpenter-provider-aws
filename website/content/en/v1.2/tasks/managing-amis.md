@@ -157,4 +157,4 @@ In a scenario where a faulty AMI is rolling out and begins causing downtime to y
 ## Follow-up
 
 The Karpenter project continues to add features to give you greater control over AMI upgrades on your clusters.
-If you have opinions about features you would like to see to manage AMIs with Karpenter, feel free to enter a Karpenter [New Issue](https://github.com/vesta/karpenter-provider-aws/issues/new/choose).
+If you have opinions about features you would like to see to manage AMIs with Karpenter, feel free to enter a Karpenter [New Issue](https://github.com/vestainnovations/karpenter-provider-aws/issues/new/choose).

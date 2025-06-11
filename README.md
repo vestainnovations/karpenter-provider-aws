@@ -1,10 +1,10 @@
-[![CI](https://github.com/vesta/karpenter-provider-aws/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/aws/karpenter/actions/workflows/ci.yaml)
+[![CI](https://github.com/vestainnovations/karpenter-provider-aws/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/aws/karpenter/actions/workflows/ci.yaml)
 ![GitHub stars](https://img.shields.io/github/stars/aws/karpenter-provider-aws)
 ![GitHub forks](https://img.shields.io/github/forks/aws/karpenter-provider-aws)
-[![GitHub License](https://img.shields.io/badge/License-Apache%202.0-ff69b4.svg)](https://github.com/vesta/karpenter-provider-aws/blob/main/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vesta/karpenter-provider-aws)](https://goreportcard.com/report/github.com/aws/karpenter)
+[![GitHub License](https://img.shields.io/badge/License-Apache%202.0-ff69b4.svg)](https://github.com/vestainnovations/karpenter-provider-aws/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vestainnovations/karpenter-provider-aws)](https://goreportcard.com/report/github.com/aws/karpenter)
 [![Coverage Status](https://coveralls.io/repos/github/aws/karpenter-provider-aws/badge.svg?branch=main)](https://coveralls.io/github/aws/karpenter?branch=main)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/vesta/karpenter-provider-aws/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/vestainnovations/karpenter-provider-aws/issues)
 
 ![](website/static/banner.png)
 
