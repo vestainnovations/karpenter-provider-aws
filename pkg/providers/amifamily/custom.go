@@ -21,10 +21,10 @@ import (
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily/bootstrap"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily/bootstrap"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
 )
 
 type Custom struct {

@@ -35,11 +35,11 @@ import (
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
-	"github.com/aws/karpenter-provider-aws/test/pkg/debug"
-	environmentaws "github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/common"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/debug"
+	environmentaws "github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/common"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

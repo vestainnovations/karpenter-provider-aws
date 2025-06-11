@@ -36,15 +36,15 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
+	awserrors "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instance"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/launchtemplate"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 )
 
 const (
@@ -362,7 +362,7 @@ func (v *Validation) mockLaunchTemplateOptions(
 	// selected by one of those NodePools. We should also prioritize an InstanceType which will launch with a non-GPU
 	// (VariantStandard) AMI, since GPU AMIs may have a larger snapshot size than that supported by the NodeClass'
 	// blockDeviceMappings.
-	// Historical Issue: https://github.com/aws/karpenter-provider-aws/issues/7928
+	// Historical Issue: https://github.com/vestainnovations/karpenter-providernter-provider-aws/issues/7928
 	instanceTypes, err := v.getInstanceTypesForNodeClass(ctx, nodeClass)
 	if err != nil {
 		return nil, err
@@ -389,7 +389,7 @@ func (v *Validation) mockLaunchTemplateOptions(
 	// compatible, and dynamic instance type resolution may choose those instance types for the dry-run, even if they
 	// wouldn't be chosen due to cost in practice. This ensures the behavior matches that on Karpenter v1.3, preventing a
 	// potential regression for Windows users.
-	// Tracking issue: https://github.com/aws/karpenter-provider-aws/issues/7985
+	// Tracking issue: https://github.com/vestainnovations/karpenter-providernter-provider-aws/issues/7985
 	if len(selectedInstanceTypes) == 0 || lo.ContainsBy([]string{
 		v1.AMIFamilyWindows2019,
 		v1.AMIFamilyWindows2022,

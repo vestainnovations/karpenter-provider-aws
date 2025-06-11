@@ -28,8 +28,8 @@ import (
 	"github.com/samber/lo"
 	"go.uber.org/zap"
 
-	"github.com/aws/karpenter-provider-aws/test/hack/resource/pkg/metrics"
-	"github.com/aws/karpenter-provider-aws/test/hack/resource/pkg/resourcetypes"
+	"github.com/vestainnovations/karpenter-provider-aws/test/hack/resource/pkg/metrics"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/hack/resource/pkg/resourcetypes"
 )
 
 const sweeperCleanedResourcesTableName = "sweeperCleanedResources"

@@ -20,11 +20,11 @@ import (
 
 	"github.com/awslabs/operatorpkg/status"
 
-	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/launchtemplate"
 
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
 )
 
 type Readiness struct {

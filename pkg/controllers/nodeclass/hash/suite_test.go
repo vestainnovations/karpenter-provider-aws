@@ -31,11 +31,11 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/controllers/nodeclass/hash"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/nodeclass/hash"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

@@ -33,10 +33,10 @@ import (
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 	"sigs.k8s.io/karpenter/pkg/utils/resources"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 
 	"github.com/samber/lo"
 	corev1 "k8s.io/api/core/v1"
@@ -44,12 +44,12 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	cloudproviderevents "github.com/aws/karpenter-provider-aws/pkg/cloudprovider/events"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/securitygroup"
+	cloudproviderevents "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/cloudprovider/events"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/capacityreservation"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instance"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/securitygroup"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 )

@@ -27,11 +27,11 @@ import (
 
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	"github.com/aws/karpenter-provider-aws/pkg/fake"
-	awscontext "github.com/aws/karpenter-provider-aws/pkg/operator"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/fake"
+	awscontext "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

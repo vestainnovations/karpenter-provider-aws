@@ -43,11 +43,11 @@ import (
 
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/sqs"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/common"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/sqs"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/common"
 )
 
 func init() {

@@ -33,9 +33,9 @@ import (
 	corecloudprovider "sigs.k8s.io/karpenter/pkg/cloudprovider"
 	coreoperator "sigs.k8s.io/karpenter/pkg/operator"
 
-	"github.com/aws/karpenter-provider-aws/pkg/cloudprovider"
-	"github.com/aws/karpenter-provider-aws/pkg/operator"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/cloudprovider"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
 )
 
 var clusterName string

@@ -26,8 +26,8 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"

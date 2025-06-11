@@ -26,12 +26,12 @@ import (
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 	"sigs.k8s.io/karpenter/pkg/test/v1alpha1"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/controllers/providers/ssm/invalidation"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/providers/ssm/invalidation"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

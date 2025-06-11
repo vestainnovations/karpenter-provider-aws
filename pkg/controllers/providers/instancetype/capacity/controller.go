@@ -33,8 +33,8 @@ import (
 	"sigs.k8s.io/karpenter/pkg/operator/injection"
 	nodeutils "sigs.k8s.io/karpenter/pkg/utils/node"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
 )
 
 type Controller struct {

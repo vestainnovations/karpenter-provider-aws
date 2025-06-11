@@ -22,9 +22,9 @@ import (
 	"github.com/awslabs/operatorpkg/serrors"
 	"github.com/samber/lo"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily/bootstrap"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily/bootstrap"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
@@ -127,7 +127,6 @@ func (b Bottlerocket) FeatureFlags() FeatureFlags {
 	return FeatureFlags{
 		UsesENILimitedMemoryOverhead: false,
 		PodsPerCoreEnabled:           false,
-		EvictionSoftEnabled:          false,
 		SupportsENILimitedPodDensity: true,
 	}
 }

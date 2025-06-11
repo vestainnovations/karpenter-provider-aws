@@ -38,9 +38,9 @@ import (
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 	nodeutils "sigs.k8s.io/karpenter/pkg/utils/node"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/test/pkg/debug"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-provider-aws/test/pkg/debug"
+	"github.com/vestainnovations/karpenter-provider-aws/test/pkg/environment/aws"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

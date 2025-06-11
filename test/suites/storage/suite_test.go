@@ -25,8 +25,8 @@ import (
 	awssdk "github.com/aws/aws-sdk-go-v2/aws"
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	environmentaws "github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	environmentaws "github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -40,7 +40,7 @@ import (
 	"github.com/samber/lo"
 	"github.com/samber/lo/mutable"
 
-	"github.com/aws/karpenter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
 
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/karpenter/pkg/test"

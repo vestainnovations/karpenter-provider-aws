@@ -28,8 +28,8 @@ import (
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/yaml"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily/bootstrap/mime"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily/bootstrap/mime"
 )
 
 type Nodeadm struct {

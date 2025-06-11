@@ -31,9 +31,9 @@ import (
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily/bootstrap"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily/bootstrap"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
 )
 
 var DefaultEBS = v1.BlockDevice{
@@ -254,7 +254,7 @@ func (r DefaultResolver) resolveLaunchTemplates(
 	// associated capacity reservation.
 	// TODO: We can simplify this by creating an initial lt, and then copying it for each cr. However, this requires a deep
 	// copy of the LT struct, which contains an interface causing problems for deepcopy-gen. See review comment for context:
-	// https://github.com/aws/karpenter-provider-aws/pull/7726#discussion_r1955280055
+	// https://github.com/vestainnovations/karpenter-providernter-provider-aws/pull/7726#discussion_r1955280055
 	if len(capacityReservationIDs) == 0 {
 		capacityReservationIDs = append(capacityReservationIDs, "")
 	}

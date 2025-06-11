@@ -25,9 +25,9 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/samber/lo"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
+	awserrors "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 )
 
 type Provider interface {

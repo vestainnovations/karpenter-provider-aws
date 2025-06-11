@@ -32,9 +32,9 @@ import (
 	"sigs.k8s.io/karpenter/pkg/operator/options"
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instance"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 )
 
 const createdAtTag = "node.k8s.amazonaws.com/createdAt"

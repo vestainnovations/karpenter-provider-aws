@@ -26,7 +26,7 @@ import (
 
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -42,7 +42,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	environmentaws "github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
+	environmentaws "github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
 
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 )
@@ -312,6 +312,7 @@ var _ = Describe("AMI", func() {
 			// Since the node has joined the cluster, we know our bootstrapping was correct.
 			// Just verify if the UserData contains our custom content too, rather than doing a byte-wise comparison.
 			Expect(string(actualUserData)).To(ContainSubstring("Running custom user data script"))
+			Expect(string(actualUserData)).To(ContainSubstring("karpenter.sh/do-not-sync-taints=true"))
 		})
 		It("should merge non-MIME UserData contents for AL2 AMIFamily", func() {
 			content, err := os.ReadFile("testdata/al2_no_mime_userdata_input.sh")
@@ -333,6 +334,7 @@ var _ = Describe("AMI", func() {
 			// Since the node has joined the cluster, we know our bootstrapping was correct.
 			// Just verify if the UserData contains our custom content too, rather than doing a byte-wise comparison.
 			Expect(string(actualUserData)).To(ContainSubstring("Running custom user data script"))
+			Expect(string(actualUserData)).To(ContainSubstring("karpenter.sh/do-not-sync-taints=true"))
 		})
 		It("should merge UserData contents for Bottlerocket AMIFamily", func() {
 			content, err := os.ReadFile("testdata/br_userdata_input.sh")
@@ -352,11 +354,15 @@ var _ = Describe("AMI", func() {
 			actualUserData, err := base64.StdEncoding.DecodeString(*getInstanceAttribute(pod.Spec.NodeName, "userData").UserData.Value)
 			Expect(err).ToNot(HaveOccurred())
 			Expect(string(actualUserData)).To(ContainSubstring("kube-api-qps = 30"))
+			Expect(string(actualUserData)).To(ContainSubstring("'karpenter.sh/do-not-sync-taints' = 'true'"))
+			Expect(string(actualUserData)).To(ContainSubstring("eviction-max-pod-grace-period = 40"))
+			Expect(string(actualUserDatavestainnovations/karpenter-provider("[settings.kubernetes.eviction-soft]\n'memory.available' = '100Mi'"))
+			Expect(string(actualUserData)).To(ContainSubstring("[settings.kubernetes.eviction-soft-grace-period]\n'memory.available' = '30s'"))
 		})
 		// Windows tests are can flake due to the instance types that are used in testing.
 		// The VPC Resource controller will need to support the instance types that are used.
 		// If the instance type is not supported by the controller resource `vpc.amazonaws.com/PrivateIPv4Address` will not register.
-		// Issue: https://github.com/aws/karpenter-provider-aws/issues/4472
+		// Issue: https://github.com/vestainnovations/karpenter-provider-aws/issues/4472
 		// See: https://github.com/aws/amazon-vpc-resource-controller-k8s/blob/master/pkg/aws/vpc/limits.go
 		It("should merge UserData contents for Windows AMIFamily", func() {
 			env.ExpectWindowsIPAMEnabled()
@@ -399,6 +405,7 @@ var _ = Describe("AMI", func() {
 			Expect(err).ToNot(HaveOccurred())
 			Expect(string(actualUserData)).To(ContainSubstring("Write-Host \"Running custom user data script\""))
 			Expect(string(actualUserData)).To(ContainSubstring("[string]$EKSBootstrapScriptFile = \"$env:ProgramFiles\\Amazon\\EKS\\Start-EKSBootstrap.ps1\""))
+			Expect(string(actualUserData)).To(ContainSubstring("karpenter.sh/do-not-sync-taints=true"))
 		})
 	})
 })

@@ -55,21 +55,21 @@ import (
 
 	"sigs.k8s.io/karpenter/pkg/apis"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	awscache "github.com/aws/karpenter-provider-aws/pkg/cache"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instanceprofile"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/pricing"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/securitygroup"
-	ssmp "github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/version"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
+	awscache "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/cache"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/capacityreservation"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instance"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instanceprofile"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/launchtemplate"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/pricing"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/securitygroup"
+	ssmp "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/subnet"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/version"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 )
 
 func init() {
@@ -139,7 +139,7 @@ func NewOperator(ctx context.Context, operator *operator.Operator) (context.Cont
 	kubeDNSIP, err := KubeDNSIP(ctx, operator.KubernetesInterface)
 	if err != nil {
 		// If we fail to get the kube-dns IP, we don't want to crash because this causes issues with custom DNS setups
-		// https://github.com/aws/karpenter-provider-aws/issues/2787
+		// https://github.com/vestainnovations/karpenter-providernter-provider-aws/issues/2787
 		log.FromContext(ctx).V(1).Info(fmt.Sprintf("unable to detect the IP of the kube-dns service, %s", err))
 	} else {
 		log.FromContext(ctx).WithValues("kube-dns-ip", kubeDNSIP).V(1).Info("discovered kube dns")

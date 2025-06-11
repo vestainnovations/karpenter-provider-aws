@@ -43,10 +43,10 @@ import (
 
 	"sigs.k8s.io/karpenter/pkg/events"
 
-	"github.com/aws/karpenter-provider-aws/pkg/cache"
-	interruptionevents "github.com/aws/karpenter-provider-aws/pkg/controllers/interruption/events"
-	"github.com/aws/karpenter-provider-aws/pkg/controllers/interruption/messages"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/sqs"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/cache"
+	interruptionevents "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/interruption/events"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/interruption/messages"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/sqs"
 )
 
 type Action string

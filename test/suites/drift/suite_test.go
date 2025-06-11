@@ -41,10 +41,10 @@ import (
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 	"sigs.k8s.io/karpenter/pkg/utils/resources"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/common"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/common"
 )
 
 var env *aws.Environment

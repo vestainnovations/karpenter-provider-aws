@@ -29,9 +29,9 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/service/eks"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
 
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
 
 	"sigs.k8s.io/karpenter/pkg/utils/pretty"
 )

@@ -41,18 +41,18 @@ import (
 
 	karpoptions "sigs.k8s.io/karpenter/pkg/operator/options"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/securitygroup"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	awserrors "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/securitygroup"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/subnet"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/utils/pretty"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
 )
 
 type Provider interface {
@@ -171,6 +171,7 @@ func (p *DefaultProvider) CreateAMIOptions(ctx context.Context, nodeClass *v1.EC
 			delete(labels, k)
 		}
 	}
+	labels = InjectDoNotSyncTaintsLabel(nodeClass.AMIFamily(), labels)
 	// Relying on the status rather than an API call means that Karpenter is subject to a race
 	// condition where EC2NodeClass spec changes haven't propagated to the status once a node
 	// has launched.
@@ -367,10 +368,11 @@ func blockDeviceMappings(blockDeviceMappings []*v1.BlockDeviceMapping) []ec2type
 				//nolint: gosec
 				Iops: lo.EmptyableToPtr(int32(lo.FromPtr(blockDeviceMapping.EBS.IOPS))),
 				//nolint: gosec
-				Throughput: lo.EmptyableToPtr(int32(lo.FromPtr(blockDeviceMapping.EBS.Throughput))),
-				KmsKeyId:   blockDeviceMapping.EBS.KMSKeyID,
-				SnapshotId: blockDeviceMapping.EBS.SnapshotID,
-				VolumeSize: volumeSize(blockDeviceMapping.EBS.VolumeSize),
+				Throughput:               lo.EmptyableToPtr(int32(lo.FromPtr(blockDeviceMapping.EBS.Throughput))),
+				KmsKeyId:                 blockDeviceMapping.EBS.KMSKeyID,
+				SnapshotId:               blockDeviceMapping.EBS.SnapshotID,
+				VolumeInitializationRate: blockDeviceMapping.EBS.VolumeInitializationRate,
+				VolumeSize:               volumeSize(blockDeviceMapping.EBS.VolumeSize),
 			},
 		})
 	}
@@ -497,4 +499,17 @@ func (p *DefaultProvider) ResolveClusterCIDR(ctx context.Context) error {
 		return nil
 	}
 	return fmt.Errorf("no CIDR found in DescribeCluster response")
+}
+
+// InjectDoNotSyncTaintsLabel adds a label for all non-custom AMI families. It is exported just for ease
+// of testing.
+// This label is to tell karpenter that it should *not* sync taints. This is to work around a race condition.
+// By default, this label is not added to the custom AMI family as users may still want their taints synced. Startup
+// taints will be racy for custom AMIs if they do not add this label, however.
+// https://github.com/kubernetes-sigs/karpenter/issues/1772
+func InjectDoNotSyncTaintsLabel(amiFamilyName string, labels map[string]string) map[string]string {
+	if amiFamilyName != v1.AMIFamilyCustom {
+		return lo.Assign(labels, map[string]string{karpv1.NodeDoNotSyncTaintsLabelKey: "true"})
+	}
+	return labels
 }

@@ -27,11 +27,11 @@ import (
 
 	"github.com/samber/lo"
 
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
+	"github.com/vestainnovations/karpenter-provider-aws/test/pkg/environment/aws"
 
 	"sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
 
 	. "github.com/onsi/ginkgo/v2"
 )
@@ -135,7 +135,7 @@ var _ = Describe("KubeletConfiguration Overrides", func() {
 			// Windows tests are can flake due to the instance types that are used in testing.
 			// The VPC Resource controller will need to support the instance types that are used.
 			// If the instance type is not supported by the controller resource `vpc.amazonaws.com/PrivateIPv4Address` will not register.
-			// Issue: https://github.com/aws/karpenter-provider-aws/issues/4472
+			// Issue: https://github.com/vestainnovations/karpenter-providernter-provider-aws/issues/4472
 			// See: https://github.com/aws/amazon-vpc-resource-controller-k8s/blob/master/pkg/aws/vpc/limits.go
 			Entry("when the AMIFamily is Windows2019", v1.AMISelectorTerm{Alias: "windows2019@latest"}),
 			Entry("when the AMIFamily is Windows2022", v1.AMISelectorTerm{Alias: "windows2022@latest"}),

@@ -31,14 +31,14 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 	"sigs.k8s.io/karpenter/pkg/utils/pretty"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
 )
 
 type Provider interface {

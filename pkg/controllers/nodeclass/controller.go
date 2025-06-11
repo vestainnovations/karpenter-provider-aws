@@ -47,16 +47,16 @@ import (
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 	"sigs.k8s.io/karpenter/pkg/events"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instanceprofile"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/securitygroup"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/capacityreservation"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instanceprofile"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/launchtemplate"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/securitygroup"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/subnet"
 )
 
 type Controller struct {

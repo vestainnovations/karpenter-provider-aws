@@ -23,11 +23,11 @@ import (
 	"k8s.io/apimachinery/pkg/api/resource"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 
-	awscache "github.com/aws/karpenter-provider-aws/pkg/cache"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype/offering"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/pricing"
+	awscache "github.com/vestainnovations/karpenter-provider-aws/pkg/cache"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/capacityreservation"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype/offering"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/pricing"
 
 	"github.com/mitchellh/hashstructure/v2"
 	"github.com/patrickmn/go-cache"
@@ -41,10 +41,10 @@ import (
 	"github.com/samber/lo"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
 
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/subnet"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/utils/pretty"

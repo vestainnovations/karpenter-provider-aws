@@ -28,17 +28,17 @@ import (
 	"github.com/samber/lo"
 	"k8s.io/utils/clock"
 
-	"github.com/aws/karpenter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/errors"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/version"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	sdk "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/version"
 
 	"sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
 )
 
 type Provider interface {

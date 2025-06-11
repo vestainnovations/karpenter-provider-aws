@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GH_REPO="${GH_REPO:-aws/karpenter-provider-aws}"
+GH_REPO="${GH_REPO:-vestainnovations/karpenter-provider-aws}"
 RELEASE_COUNT="${RELEASE_COUNT:-10}"
 
 # Translates a git tag to the corresponding ECR tag. Starting with Karpenter v0.35.0 the leading v is dropped in the ECR tag.

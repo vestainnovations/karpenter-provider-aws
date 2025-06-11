@@ -81,7 +81,7 @@ Note that, like the stable releases, release candidates prior to `0.35.0` are pr
 
 ### Snapshot Releases
 
-We release a snapshot release for every commit that gets merged into [`aws/karpenter-provider-aws`](https://www.github.com/aws/karpenter-provider-aws). This enables users to immediately try a new feature or fix right after it's merged rather than waiting days or weeks for release.
+We release a snapshot release for every commit that gets merged into [`vestainnovations/karpenter-provider-aws`](https://www.github.com/vestainnovations/karpenter-provider-aws). This enables users to immediately try a new feature or fix right after it's merged rather than waiting days or weeks for release.
 
 Snapshot releases are not made available in the same public ECR repository as other release types, they are instead published to a separate private ECR repository.
 Helm charts are published to `oci://{{< param "snapshot_repo.account_id" >}}.dkr.ecr.{{< param "snapshot_repo.region" >}}.amazonaws.com/karpenter/snapshot/karpenter` and are tagged with the git commit hash prefixed by the Karpenter major version (e.g. `v0-fc17bfc89ebb30a3b102a86012b3e3992ec08adf`).

@@ -67,7 +67,7 @@ make image # build and push the karpenter images
 
 *Note: that this will produce a build with the version of https://github.com/kubernetes-sigs/karpenter in your local filesystem.
 
-You can test out changes made in https://github.com/kubernetes-sigs/karpenter by replacing the dependency of https://github.com/aws/karpenter-provider-aws/.
+You can test out changes made in https://github.com/kubernetes-sigs/karpenter by replacing the dependency of https://github.com/vestainnovations/karpenter-provider-aws/.
 For local changes, replace `$PATH_TO_KUBERNETES_SIGS_KARPENTER` with the relative or absolute path and run:
 
 ```bash
@@ -83,7 +83,7 @@ If you only need to build and publish an image to a container registry, run the 
 ```bash
 make image # build and push the karpenter images
 ```
-You can test out changes made in https://github.com/kubernetes-sigs/karpenter by replacing the dependency of https://github.com/aws/karpenter-provider-aws/.
+You can test out changes made in https://github.com/kubernetes-sigs/karpenter by replacing the dependency of https://github.com/vestainnovations/karpenter-provider-aws/.
 For local changes, replace `$PATH_TO_KUBERNETES_SIGS_KARPENTER` with the relative or absolute path and run:
 
 ```bash

@@ -25,13 +25,13 @@ import (
 
 	"github.com/samber/lo"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 
-	controllersversion "github.com/aws/karpenter-provider-aws/pkg/controllers/providers/version"
-	environmentaws "github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/common"
+	controllersversion "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/providers/version"
+	environmentaws "github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/common"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

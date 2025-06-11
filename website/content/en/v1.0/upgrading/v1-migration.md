@@ -264,7 +264,7 @@ You should still review the upgrade procedure; the sequence of operations remain
 
    ```bash
    POLICY_DOCUMENT=$(mktemp)
-   curl -fsSL https://raw.githubusercontent.com/aws/karpenter-provider-aws/13d6fc014ea59019b1c3b1953184efc41809df11/website/content/en/v1.0/upgrading/get-controller-policy.sh | sh | envsubst > ${POLICY_DOCUMENT}
+   curl -fsSL https://raw.githubusercontent.com/vestainnovations/karpenter-provider-aws/13d6fc014ea59019b1c3b1953184efc41809df11/website/content/en/v1.0/upgrading/get-controller-policy.sh | sh | envsubst > ${POLICY_DOCUMENT}
    POLICY_NAME="KarpenterControllerPolicy-${CLUSTER_NAME}-v1"
    ROLE_NAME="${CLUSTER_NAME}-karpenter"
    POLICY_ARN="$(aws iam create-policy --policy-name "${POLICY_NAME}" --policy-document "file://${POLICY_DOCUMENT}" | jq -r .Policy.Arn)"
@@ -315,7 +315,7 @@ these webhook configurations by hand: specifically, you will need to remove the 
 
     ```bash
     TEMPOUT=$(mktemp)
-    curl -fsSL https://raw.githubusercontent.com/aws/karpenter-provider-aws/v"${KARPENTER_VERSION}"/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > "${TEMPOUT}"
+    curl -fsSL https://raw.githubusercontent.com/vestainnovations/karpenter-provider-aws/v"${KARPENTER_VERSION}"/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > "${TEMPOUT}"
     aws cloudformation deploy \
       --stack-name "Karpenter-${CLUSTER_NAME}" \
       --template-file "${TEMPOUT}" \
@@ -384,7 +384,7 @@ For example: `kubectl get nodepool.v1beta1.karpenter.sh`.
 
    ```bash
    POLICY_DOCUMENT=$(mktemp)
-   curl -fsSL https://raw.githubusercontent.com/aws/karpenter-provider-aws/website/docs/v1.0/upgrading/get-controller-policy.sh | sh | envsubst > ${POLICY_DOCUMENT}
+   curl -fsSL https://raw.githubusercontent.com/vestainnovations/karpenter-provider-aws/website/docs/v1.0/upgrading/get-controller-policy.sh | sh | envsubst > ${POLICY_DOCUMENT}
    POLICY_NAME="KarpenterControllerPolicy-${CLUSTER_NAME}-${KARPENTER_VERSION}"
    ROLE_NAME="${CLUSTER_NAME}-karpenter"
    POLICY_ARN="$(aws iam create-policy --policy-name "${POLICY_NAME}" --policy-document "file://${POLICY_DOCUMENT}" | jq -r .Policy.Arn)"
@@ -424,7 +424,7 @@ For example: `kubectl get nodepool.v1beta1.karpenter.sh`.
    ```bash
    TEMPOUT=$(mktemp)
    VERSION_TAG=$([[ ${KARPENTER_VERSION} == v* ]] && echo "${KARPENTER_VERSION}" || echo "v${KARPENTER_VERSION}")
-   curl -fsSL https://raw.githubusercontent.com/aws/karpenter-provider-aws/${VERSION_TAG}/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > "${TEMPOUT}"
+   curl -fsSL https://raw.githubusercontent.com/vestainnovations/karpenter-provider-aws/${VERSION_TAG}/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > "${TEMPOUT}"
    aws cloudformation deploy \
      --stack-name "Karpenter-${CLUSTER_NAME}" \
      --template-file "${TEMPOUT}" \

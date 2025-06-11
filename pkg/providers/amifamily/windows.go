@@ -21,7 +21,7 @@ import (
 	"github.com/awslabs/operatorpkg/serrors"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
 	"github.com/samber/lo"
 	"k8s.io/apimachinery/pkg/api/resource"
@@ -29,8 +29,8 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	ec2types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily/bootstrap"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/ssm"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily/bootstrap"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/ssm"
 
 	corev1 "k8s.io/api/core/v1"
 

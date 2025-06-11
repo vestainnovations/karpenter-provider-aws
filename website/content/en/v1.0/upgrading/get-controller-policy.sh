@@ -2,7 +2,7 @@
 
 sourceVersionCfn=$(mktemp)
 versionTag=$([[ ${KARPENTER_VERSION} == v* ]] && echo "${KARPENTER_VERSION}" || echo "v${KARPENTER_VERSION}")
-curl -fsSL https://raw.githubusercontent.com/aws/karpenter-provider-aws/${versionTag}/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > ${sourceVersionCfn}
+curl -fsSL https://raw.githubusercontent.com/vestainnovations/karpenter-provider-aws/${versionTag}/website/content/en/preview/getting-started/getting-started-with-karpenter/cloudformation.yaml > ${sourceVersionCfn}
 
 # Substitute the cloudformation templating strings for our environment variables
 sed -e 's/!Sub//g' -i "" "${sourceVersionCfn}"

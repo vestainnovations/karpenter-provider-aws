@@ -27,8 +27,8 @@ import (
 
 	"github.com/samber/lo"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/test/pkg/debug"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/debug"
 
 	. "github.com/onsi/ginkgo/v2"
 )

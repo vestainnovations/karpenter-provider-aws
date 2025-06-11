@@ -31,9 +31,9 @@ import (
 	"sigs.k8s.io/karpenter/pkg/events"
 	"sigs.k8s.io/karpenter/pkg/utils/resources"
 
-	"github.com/aws/karpenter-provider-aws/pkg/cloudprovider"
-	controllersinstancetypecapacity "github.com/aws/karpenter-provider-aws/pkg/controllers/providers/instancetype/capacity"
-	"github.com/aws/karpenter-provider-aws/pkg/fake"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/cloudprovider"
+	controllersinstancetypecapacity "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/providers/instancetype/capacity"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/fake"
 
 	"sigs.k8s.io/karpenter/pkg/test/v1alpha1"
 
@@ -46,10 +46,10 @@ import (
 	. "sigs.k8s.io/karpenter/pkg/test/expectations"
 	. "sigs.k8s.io/karpenter/pkg/utils/testing"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis"
+	v1 "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 )
 
 var ctx context.Context

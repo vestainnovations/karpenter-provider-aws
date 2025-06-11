@@ -32,14 +32,14 @@ import (
 	"sigs.k8s.io/karpenter/pkg/scheduling"
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	awscache "github.com/aws/karpenter-provider-aws/pkg/cache"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/pricing"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	awscache "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/cache"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/amifamily"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/instancetype"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/pricing"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/subnet"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 )
 
 func main() {

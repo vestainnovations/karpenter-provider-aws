@@ -25,8 +25,8 @@ import (
 	sqstypes "github.com/aws/aws-sdk-go-v2/service/sqs/types"
 	"github.com/samber/lo"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
 )
 
 type Provider interface {

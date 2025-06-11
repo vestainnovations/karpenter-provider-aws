@@ -29,8 +29,8 @@ As the OCI Helm chart is signed by [Cosign](https://github.com/sigstore/cosign) 
 ```shell
 cosign verify public.ecr.aws/karpenter/karpenter:1.4.0 \
   --certificate-oidc-issuer=https://token.actions.githubusercontent.com \
-  --certificate-identity-regexp='https://github\.com/aws/karpenter-provider-aws/\.github/workflows/release\.yaml@.+' \
-  --certificate-github-workflow-repository=aws/karpenter-provider-aws \
+  --certificate-identity-regexp='https://github\.com/vestainnovations/karpenter-provider-aws/\.github/workflows/release\.yaml@.+' \
+  --certificate-github-workflow-repository=vestainnovations/karpenter-provider-aws \
   --certificate-github-workflow-name=Release \
   --certificate-github-workflow-ref=refs/tags/v1.4.0 \
   --annotations version=1.4.0

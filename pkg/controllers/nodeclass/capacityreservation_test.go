@@ -24,8 +24,8 @@ import (
 	"github.com/samber/lo"
 	. "sigs.k8s.io/karpenter/pkg/test/expectations"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 )
 
 const selfOwnerID = "012345678901"

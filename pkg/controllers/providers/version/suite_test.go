@@ -27,10 +27,10 @@ import (
 	ekstypes "github.com/aws/aws-sdk-go-v2/service/eks/types"
 	"github.com/samber/lo"
 
-	"github.com/aws/karpenter-provider-aws/pkg/apis"
-	controllersversion "github.com/aws/karpenter-provider-aws/pkg/controllers/providers/version"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/apis"
+	controllersversion "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/controllers/providers/version"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

@@ -24,9 +24,9 @@ import (
 	timestreamwritetypes "github.com/aws/aws-sdk-go-v2/service/timestreamwrite/types"
 	"github.com/samber/lo"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
 
-	"github.com/aws/karpenter-provider-aws/test/pkg/environment/common"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/common"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

@@ -40,9 +40,9 @@ import (
 
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	awserrors "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/utils"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

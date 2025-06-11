@@ -32,9 +32,9 @@ import (
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 	"sigs.k8s.io/karpenter/pkg/test"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/test/pkg/debug"
-	environmentaws "github.com/aws/karpenter-provider-aws/test/pkg/environment/aws"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/debug"
+	environmentaws "github.com/vestainnovations/karpenter-providernter-provider-aws/test/pkg/environment/aws"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
@@ -286,7 +286,7 @@ var _ = Describe("Scheduling", Ordered, ContinueOnFailure, func() {
 		// Windows tests are can flake due to the instance types that are used in testing.
 		// The VPC Resource controller will need to support the instance types that are used.
 		// If the instance type is not supported by the controller resource `vpc.amazonaws.com/PrivateIPv4Address` will not register.
-		// Issue: https://github.com/aws/karpenter-provider-aws/issues/4472
+		// Issue: https://github.com/vestainnovations/karpenter-providernter-provider-aws/issues/4472
 		// See: https://github.com/aws/amazon-vpc-resource-controller-k8s/blob/master/pkg/aws/vpc/limits.go
 		It("should support well-known labels for windows-build version", func() {
 			env.ExpectWindowsIPAMEnabled()

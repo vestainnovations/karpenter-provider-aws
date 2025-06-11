@@ -34,10 +34,10 @@ import (
 	ec2types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/samber/lo"
 
-	controllerspricing "github.com/aws/karpenter-provider-aws/pkg/controllers/providers/pricing"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/pricing"
-	"github.com/aws/karpenter-provider-aws/pkg/test"
+	controllerspricing "github.com/vestainnovations/karpenter-provider-aws/pkg/controllers/providers/pricing"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/providers/pricing"
+	"github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/test"
 )
 
 func getAWSRegions(partition string) []string {

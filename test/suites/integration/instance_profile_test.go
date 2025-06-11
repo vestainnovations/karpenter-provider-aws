@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"time"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
 
 	"github.com/awslabs/operatorpkg/status"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -28,7 +28,7 @@ import (
 
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
+	awserrors "github.com/vestainnovations/karpenter-providernter-provider-aws/pkg/errors"
 
 	. "github.com/awslabs/operatorpkg/test/expectations"
 	. "github.com/onsi/ginkgo/v2"
