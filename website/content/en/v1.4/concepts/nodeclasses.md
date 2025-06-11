@@ -303,7 +303,7 @@ The Bottlerocket AMIFamily does not support the following fields:
 * `evictionMaxPodGracePeriod`
 
 If any of these fields are specified on a Bottlerocket EC2NodeClass, they will be ommited from generated UserData and ignored for scheduling purposes.
-Support for these fields can be tracked via GitHub issue [#3722](https://github.com/aws/karpenter-provider-aws/issues/3722).
+Support for these fields can be tracked via GitHub issue [#3722](https://github.com/vesta/karpenter-provider-aws/issues/3722).
 {{% /alert %}}
 
 #### Pods Per Core

@@ -47,7 +47,7 @@ imaging:
   anchor: smart
 params:
   copyright: "Amazon.com, Inc. or its affiliates."
-  github_repo: "https://github.com/aws/karpenter-provider-aws"
+  github_repo: "https://github.com/vesta/karpenter-provider-aws"
   github_subdir: website
   github_branch: main
   images:

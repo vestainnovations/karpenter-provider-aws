@@ -23,7 +23,7 @@ This list represents the minimal set of changes that are needed to ensure proper
 
 ### v1 APIs
 
-**Issue Ref(s):** https://github.com/kubernetes-sigs/karpenter/issues/758, https://github.com/aws/karpenter-provider-aws/issues/5006
+**Issue Ref(s):** https://github.com/kubernetes-sigs/karpenter/issues/758, https://github.com/vesta/karpenter-provider-aws/issues/5006
 
 **Category:** Breaking, Stability
 
@@ -31,11 +31,11 @@ For Karpenter to be considered v1, the CustomResources that are shipped with an 
 
 ### Removing Ubuntu AMIFamily
 
-**Issue Ref(s):** https://github.com/aws/karpenter-provider-aws/issues/5572
+**Issue Ref(s):** https://github.com/vesta/karpenter-provider-aws/issues/5572
 
 **Category:** Breaking
 
-Karpenter has supported the Ubuntu AMIFamily [since the v0.6.2 version of Karpenter](https://github.com/aws/karpenter-provider-aws/pull/1323). EKS does not have formal support for the Ubuntu AMIFamily for MNG or SMNG nodes (it's currently a third-party vendor AMI). As a result, there is no direct line-of-sight between changes in things like supported Kubernetes versions or kernel updates on the image.
+Karpenter has supported the Ubuntu AMIFamily [since the v0.6.2 version of Karpenter](https://github.com/vesta/karpenter-provider-aws/pull/1323). EKS does not have formal support for the Ubuntu AMIFamily for MNG or SMNG nodes (it's currently a third-party vendor AMI). As a result, there is no direct line-of-sight between changes in things like supported Kubernetes versions or kernel updates on the image.
 
 Users who still want to use Ubuntu can still use a Custom AMIFamily with amiSelectorTerms pinned to the latest Ubuntu AMI ID. They can reference `bootstrapMode: AL2` to get the same userData configuration they received before.
 
@@ -74,8 +74,8 @@ As part of v1, we are changing our default from `ScheduleAnyways` to `DoNotSched
 
 **Category:** Planned Deprecations, Breaking
 
-Karpenter currently supports checking the subnets that your instance request is attempting to launch into and explicitly configuring that `AssociatePublicIPAddress: false` when you are only launching into private subnets. This feature was supported because users had specifically requested for it in https://github.com/aws/karpenter-provider-aws/issues/3815, where users were writing deny policies on their EC2 instance launches through IRSA policies or SCP for instances that attempted to create network interfaces that associated an IP address. Now with https://github.com/aws/karpenter-provider-aws/pull/5437 merged, we have the ability to set the `associatePublicIPAddress` value explicitly on the EC2NodeClass. Users can directly set this value to `false` and we will no longer need to introspect the subnets when making instance launch requests.
+Karpenter currently supports checking the subnets that your instance request is attempting to launch into and explicitly configuring that `AssociatePublicIPAddress: false` when you are only launching into private subnets. This feature was supported because users had specifically requested for it in https://github.com/vesta/karpenter-provider-aws/issues/3815, where users were writing deny policies on their EC2 instance launches through IRSA policies or SCP for instances that attempted to create network interfaces that associated an IP address. Now with https://github.com/vesta/karpenter-provider-aws/pull/5437 merged, we have the ability to set the `associatePublicIPAddress` value explicitly on the EC2NodeClass. Users can directly set this value to `false` and we will no longer need to introspect the subnets when making instance launch requests.
 
 #### Tasks
 
-- [ ] Remove the [`CheckAnyPublicIPAssociations`](https://github.com/aws/karpenter-provider-aws/blob/ea8ea0ecb042f4143e2948d4e299e169671841fe/pkg/providers/subnet/subnet.go#L97) call in our launch template creation at v1
+- [ ] Remove the [`CheckAnyPublicIPAssociations`](https://github.com/vesta/karpenter-provider-aws/blob/ea8ea0ecb042f4143e2948d4e299e169671841fe/pkg/providers/subnet/subnet.go#L97) call in our launch template creation at v1

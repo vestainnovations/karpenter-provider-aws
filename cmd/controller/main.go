@@ -15,10 +15,10 @@ limitations under the License.
 package main
 
 import (
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/cloudprovider"
-	"github.com/aws/karpenter-provider-aws/pkg/controllers"
-	"github.com/aws/karpenter-provider-aws/pkg/operator"
+	v1 "github.com/vesta/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vesta/karpenter-provider-aws/pkg/cloudprovider"
+	"github.com/vesta/karpenter-provider-aws/pkg/controllers"
+	"github.com/vesta/karpenter-provider-aws/pkg/operator"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider/metrics"
 	corecontrollers "sigs.k8s.io/karpenter/pkg/controllers"
