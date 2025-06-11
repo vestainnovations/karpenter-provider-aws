@@ -28,8 +28,8 @@ import (
 	"sigs.k8s.io/karpenter/pkg/events"
 	"sigs.k8s.io/karpenter/pkg/utils/resources"
 
-	sdk "github.com/aws/karpenter-provider-aws/pkg/aws"
-	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	sdk "github.com/vestainnovations/karpenter-provider-aws/pkg/aws"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/utils"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
@@ -42,14 +42,14 @@ import (
 
 	karpv1 "sigs.k8s.io/karpenter/pkg/apis/v1"
 
-	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/batcher"
-	"github.com/aws/karpenter-provider-aws/pkg/cache"
-	awserrors "github.com/aws/karpenter-provider-aws/pkg/errors"
-	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
+	v1 "github.com/vestainnovations/karpenter-provider-aws/pkg/apis/v1"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/batcher"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/cache"
+	awserrors "github.com/vestainnovations/karpenter-provider-aws/pkg/errors"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/operator/options"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/capacityreservation"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/launchtemplate"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/subnet"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 	"sigs.k8s.io/karpenter/pkg/scheduling"
@@ -258,7 +258,7 @@ func (p *DefaultProvider) launchInstance(
 	// Create fleet
 	createFleetInput := GetCreateFleetInput(nodeClass, capacityType, tags, launchTemplateConfigs)
 	if capacityType == karpv1.CapacityTypeSpot {
-		createFleetInput.SpotOptions = &ec2types.SpotOptionsRequest{AllocationStrategy: ec2types.SpotAllocationStrategyPriceCapacityOptimized}
+		createFleetInput.SpotOptions = &ec2types.SpotOptionsRequest{AllocationStrategy: ec2types.SpotAllocationStrategyCapacityOptimized}
 	} else {
 		createFleetInput.OnDemandOptions = &ec2types.OnDemandOptionsRequest{AllocationStrategy: ec2types.FleetOnDemandAllocationStrategyLowestPrice}
 	}
