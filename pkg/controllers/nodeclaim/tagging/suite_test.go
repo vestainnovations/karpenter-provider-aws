@@ -36,8 +36,8 @@ import (
 	"github.com/aws/karpenter-provider-aws/pkg/controllers/nodeclaim/tagging"
 	"github.com/aws/karpenter-provider-aws/pkg/fake"
 	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 
 	coreoptions "sigs.k8s.io/karpenter/pkg/operator/options"
 

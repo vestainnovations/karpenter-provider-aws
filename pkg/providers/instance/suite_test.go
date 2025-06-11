@@ -42,8 +42,8 @@ import (
 	"github.com/aws/karpenter-provider-aws/pkg/cloudprovider"
 	"github.com/aws/karpenter-provider-aws/pkg/fake"
 	"github.com/aws/karpenter-provider-aws/pkg/operator/options"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"

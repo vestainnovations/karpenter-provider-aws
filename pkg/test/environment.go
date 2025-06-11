@@ -32,7 +32,6 @@ import (
 	"github.com/aws/karpenter-provider-aws/pkg/fake"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/instanceprofile"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/launchtemplate"
@@ -42,6 +41,7 @@ import (
 	"github.com/aws/karpenter-provider-aws/pkg/providers/subnet"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/version"
 	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 

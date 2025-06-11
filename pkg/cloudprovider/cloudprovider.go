@@ -47,9 +47,9 @@ import (
 	cloudproviderevents "github.com/aws/karpenter-provider-aws/pkg/cloudprovider/events"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/capacityreservation"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/instancetype"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/securitygroup"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 
 	"sigs.k8s.io/karpenter/pkg/cloudprovider"
 )

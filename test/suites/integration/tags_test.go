@@ -33,8 +33,8 @@ import (
 	coretest "sigs.k8s.io/karpenter/pkg/test"
 
 	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/test"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 )
 
 const createdAtTag = "node.k8s.amazonaws.com/createdAt"

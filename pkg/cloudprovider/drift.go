@@ -28,8 +28,8 @@ import (
 
 	v1 "github.com/aws/karpenter-provider-aws/pkg/apis/v1"
 	"github.com/aws/karpenter-provider-aws/pkg/providers/amifamily"
-	"github.com/aws/karpenter-provider-aws/pkg/providers/instance"
 	"github.com/aws/karpenter-provider-aws/pkg/utils"
+	"github.com/vestainnovations/karpenter-provider-aws/pkg/providers/instance"
 )
 
 const (
