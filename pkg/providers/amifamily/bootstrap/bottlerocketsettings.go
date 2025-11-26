@@ -71,6 +71,7 @@ type BottlerocketKubernetes struct {
 	ContainerLogMaxSize                *string                                   `toml:"container-log-max-size,omitempty"`
 	ContainerLogMaxFiles               *int                                      `toml:"container-log-max-files,omitempty"`
 	CPUManagerPolicy                   *string                                   `toml:"cpu-manager-policy,omitempty"`
+	CPUManagerPolicyOptions            []string                                  `toml:"cpu-manager-policy-options,omitempty"`
 	CPUManagerReconcilePeriod          *string                                   `toml:"cpu-manager-reconcile-period,omitempty"`
 	TopologyManagerScope               *string                                   `toml:"topology-manager-scope,omitempty"`
 	TopologyManagerPolicy              *string                                   `toml:"topology-manager-policy,omitempty"`
